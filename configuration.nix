@@ -95,6 +95,7 @@
     alsa-utils
     google-chrome
     git
+    openssh
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -108,7 +109,17 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
+  programs.ssh = {
+    enable = true;
+    addKeysToAgent = "yes";
+    extraConfig = "
+      Host github.com
+      User git
+      IdentityFile ~/.ssh/github-shonenxnaifu
+      IdentitiesOnly yes
+    ";
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
