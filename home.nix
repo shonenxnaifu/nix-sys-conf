@@ -47,7 +47,7 @@
       enable = true;
       settings = {
         theme = "Catppuccin Mocha";
-        background-opacity = 0.5;
+        background-opacity = 0.85;
       };
     };
   };
