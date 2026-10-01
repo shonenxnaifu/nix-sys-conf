@@ -89,6 +89,7 @@
     google-chrome
     git
     openssh
+    ghostty
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
