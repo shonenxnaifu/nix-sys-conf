@@ -46,7 +46,7 @@
     ghostty = {
       enable = true;
       settings = {
-        themes = "Catppuccin Mocha";
+        theme = "Catppuccin Mocha";
       };
     };
   };
