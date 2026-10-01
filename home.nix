@@ -14,7 +14,7 @@
     bash = {
       enable = true;
       shellAliases = {
-        rebuild = "sudo nixos-rebuild switch --flake ~/nix#nixos-server";
+        rebuild = "sudo nixos-rebuild switch --flake ~/nix#nixos-pc";
       };
     };
 
