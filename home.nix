@@ -42,6 +42,13 @@
       enable = true;
       enableBashIntegration = true;
     };
+
+    ghostty = {
+      enable = true;
+      settings = {
+        themes = "Catppuccin Mocha";
+      };
+    };
   };
 
   home.stateVersion = "26.05";
