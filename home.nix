@@ -18,6 +18,26 @@
       };
     };
 
+    zsh = {
+      enable = true;
+      enableCompletion = true;
+      autosuggestion.enable = true;
+      syntaxHighlighting.enable = true;
+      
+      shellAliases = {
+        rebuild = "sudo nixos-rebuild switch --flake ~/nix#nixos-pc";
+      };
+
+      oh-my-zsh = {
+        enable = true;
+        plugins = [
+          "git"
+          "z"
+        ];
+        theme = "robbyrussell";
+      };
+    };
+
     lazygit = {
       enable = true;
       enableBashIntegration = true;
