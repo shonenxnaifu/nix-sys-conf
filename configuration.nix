@@ -111,8 +111,6 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
   programs.ssh = {
-    enable = true;
-    addKeysToAgent = "yes";
     extraConfig = "
       Host github.com
       User git
