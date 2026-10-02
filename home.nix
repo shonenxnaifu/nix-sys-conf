@@ -80,7 +80,6 @@ in
         background-opacity = 0.85;
         window-decoration = false;
         background-blur-radius = 0;
-        gtk-adwaita = false;
         unfocused-split-opacity = 0.85;
         # gtk-single-instance = true;
       };
