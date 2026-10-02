@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, pkgs, ... }:
+{ config, pkgs, noctalia,... }:
 
 {
   imports =
@@ -11,6 +11,8 @@
 
       ./modules/security.nix
       ./modules/users.nix
+
+      noctalia.nixosModules.default
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -37,12 +39,6 @@
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
 
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -63,9 +59,17 @@
   ];
   hardware.alsa.enablePersistence = true;
 
+  services.xserver = {
+    enable = true;
+    videoDrivers = [ "nvidia" ];
+    xkb = {
+      layout = "us";
+      variant = "";
+    };
+  };
+
   # GPU NVIDIA
   hardware.graphics.enable = true;
-  services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia.open = true;
   hardware.nvidia.modesetting.enable = true;
 
@@ -81,6 +85,39 @@
   programs.nix-ld.libraries = with pkgs; [
     fnm
   ];
+
+  programs.noctalia = {
+    enable = true;
+    recommendedServices.enable = true;
+  };
+
+  programs.niri.enable = true;
+
+  security.polkit.enable = true;
+
+  xdg.portal = {
+    enable = true;
+    # xdgOpenUsePortal = true;
+    # config.common.default = "*";
+    # wlr.enable = true;
+    extraPortals = with pkgs; [ 
+      xdg-desktop-portal-gnome 
+      xdg-desktop-portal-gtk 
+    ];
+    config = {
+      common = {
+        default = [ "gnome" "gtk" ];
+      };
+    };
+  };
+
+  # Environment variables untuk Nvidia + Wayland
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+    # LIBVA_DRIVER_NAME = "nvidia";
+    # __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+    # WLR_NO_HARDWARE_CURSORS = "1";
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -105,6 +142,13 @@
     lua
     luarocks
     python3
+
+    # Wayland
+    wl-clipboard
+    grim
+    slurp
+    brightnessctl
+    networkmanagerapplet
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -147,8 +191,16 @@
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "26.05"; # Did you read the comment?
 
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
+  nix.settings = {
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+    extra-substituters = [ "https://noctalia.cachix.org" ];
+    extra-trusted-public-keys = [ "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4=" ];
+  };
+
+  hardware.bluetooth.enable = true;
+  services.power-profiles-daemon.enable = true;
+  services.upower.enable = true;
 }
