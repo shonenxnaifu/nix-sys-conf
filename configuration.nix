@@ -143,6 +143,7 @@
     luarocks
     python3
     fastfetch
+    gimp
 
     # Wayland
     wl-clipboard
