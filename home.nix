@@ -78,6 +78,7 @@ in
       settings = {
         theme = "Catppuccin Mocha";
         background-opacity = 0.85;
+        unfocused-split-opacity = 0.85;
       };
     };
 
