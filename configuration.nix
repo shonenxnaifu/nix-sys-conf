@@ -93,6 +93,9 @@
     openssh
     ghostty
     neovim
+    gcc
+    unzip
+    fnm
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -1,5 +1,10 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
+let 
+  zshGeneral = lib.mkOrder 1000 ''
+    eval "$(fnm env --use-on-cd --shell zsh)"
+  '';
+in
 {
   home.username = "shonenxnaifu";
   home.homeDirectory = "/home/shonenxnaifu";
@@ -36,6 +41,8 @@
         ];
         theme = "robbyrussell";
       };
+
+      initContent = lib.mkMerge [ zshGeneral ];
     };
 
     lazygit = {
