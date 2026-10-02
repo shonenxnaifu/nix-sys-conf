@@ -103,6 +103,7 @@ in
     };
   };
 
+  services.mako.enable = false;
   # Screen lock
   programs.swaylock.enable = true;
 
