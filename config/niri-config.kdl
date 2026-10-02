@@ -350,7 +350,7 @@ window-rule {
 
 window-rule {
     match app-id="com.mitchellh.ghostty"
-    opacity 0.85
+    // opacity 0.85
     draw-border-with-background false
 }
 
