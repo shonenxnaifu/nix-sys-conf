@@ -23,6 +23,7 @@ in
 
     # notification
     # mako
+    libnotify
 
     # fonts
     nerd-fonts.jetbrains-mono
@@ -103,7 +104,7 @@ in
     };
   };
 
-  services.mako.enable = false;
+  # services.mako.enable = false;
   # Screen lock
   programs.swaylock.enable = true;
 
