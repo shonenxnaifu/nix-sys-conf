@@ -102,6 +102,9 @@
     unzip
     fnm
     fzf
+    lua
+    luarocks
+    python3
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
