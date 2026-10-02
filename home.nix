@@ -22,7 +22,7 @@ in
     waybar
 
     # notification
-    mako
+    # mako
 
     # fonts
     nerd-fonts.jetbrains-mono
