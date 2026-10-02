@@ -78,8 +78,10 @@ in
       settings = {
         theme = "Catppuccin Mocha";
         background-opacity = 0.85;
-        unfocused-split-opacity = 0.85;
-        gtk-single-instance = true;
+        window-decoration = false;
+        background-blur-radius = 0;
+        # unfocused-split-opacity = 0.85;
+        # gtk-single-instance = true;
       };
     };
 
