@@ -142,6 +142,7 @@
     lua
     luarocks
     python3
+    fastfetch
 
     # Wayland
     wl-clipboard
