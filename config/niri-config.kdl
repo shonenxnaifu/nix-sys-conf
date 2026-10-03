@@ -354,8 +354,9 @@ window-rule {
     draw-border-with-background false
 }
 
-cursor {
-  xcursor-size 14
+environment {
+    XCURSOR_SIZE "10"
+    HYPRCURSOR_SIZE "10"
 }
 
 binds {
