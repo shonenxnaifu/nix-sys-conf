@@ -39,6 +39,7 @@ in
   fonts.fontconfig.enable = true;
 
   programs = {
+
     bash = {
       enable = true;
       shellAliases = {
@@ -108,6 +109,12 @@ in
         };
       };
     };
+  };
+
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      cursor-size = 14;
+    };    
   };
 
   # services.mako.enable = false;
