@@ -111,6 +111,14 @@ in
     };
   };
 
+  home.pointerCursor = {
+    gtk.enable = true;
+    x11.enable = true;
+    name = "Adwaita";
+    size = 16;
+    package = pkgs.adwaita-icon-theme;
+  };
+
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       cursor-size = 16;
