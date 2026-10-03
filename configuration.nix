@@ -153,7 +153,7 @@
     fastfetch
     gimp
     telegram-desktop
-    discord
+    vesktop
 
     # Wayland
     wl-clipboard
