@@ -113,7 +113,7 @@ in
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
-      cursor-size = 14;
+      cursor-size = 16;
     };    
   };
 
