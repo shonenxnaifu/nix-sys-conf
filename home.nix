@@ -114,9 +114,9 @@ in
   home.pointerCursor = {
     # gtk.enable = true;
     # x11.enable = true;
-    # name = "Adwaita";
+    name = "Adwaita";
     size = 16;
-    # package = pkgs.adwaita-icon-theme;
+    package = pkgs.adwaita-icon-theme;
   };
 
   dconf.settings = {
