@@ -116,8 +116,8 @@
   # Environment variables untuk Nvidia + Wayland
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
-    XCURSOR_SIZE = "16";
-    HYPRCURSOR_SIZE = "16";
+    # XCURSOR_SIZE = "16";
+    # HYPRCURSOR_SIZE = "16";
     # LIBVA_DRIVER_NAME = "nvidia";
     # __GLX_VENDOR_LIBRARY_NAME = "nvidia";
     # WLR_NO_HARDWARE_CURSORS = "1";
