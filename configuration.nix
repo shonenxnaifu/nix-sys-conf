@@ -111,9 +111,13 @@
     };
   };
 
+  programs.dconf.enable = true;
+
   # Environment variables untuk Nvidia + Wayland
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
+    XCURSOR_SIZE = "14";
+    HYPRCURSOR_SIZE = "14";
     # LIBVA_DRIVER_NAME = "nvidia";
     # __GLX_VENDOR_LIBRARY_NAME = "nvidia";
     # WLR_NO_HARDWARE_CURSORS = "1";
