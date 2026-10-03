@@ -43,6 +43,7 @@ in
       enable = true;
       shellAliases = {
         rebuild = "sudo nixos-rebuild switch --flake ~/nix#nixos-pc";
+        rebuild-test = "sudo nixos-rebuild test --flake ~/nix#nixos-pc";
       };
     };
 
@@ -54,6 +55,7 @@ in
       
       shellAliases = {
         rebuild = "sudo nixos-rebuild switch --flake ~/nix#nixos-pc";
+        rebuild-test = "sudo nixos-rebuild test --flake ~/nix#nixos-pc";
       };
 
       oh-my-zsh = {
