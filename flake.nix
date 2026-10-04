@@ -11,6 +11,8 @@
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs"; # this line is optional, prevents downloading two versions of nixpkgs but disables cache
     };
+
+    sidra.url = "github:wimpysworld/sidra";
   };
 
   outputs =
@@ -19,11 +21,12 @@
       nixpkgs,
       home-manager,
       noctalia,
+      sidra,
     }:
     {
       nixosConfigurations.nixos-pc = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit noctalia; };
+        specialArgs = { inherit noctalia sidra; };
         modules = [
           ./configuration.nix
           
