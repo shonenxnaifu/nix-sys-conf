@@ -154,6 +154,7 @@
     gimp
     telegram-desktop
     vesktop
+    sidra.packages.${pkgs.system}.default
 
     # Wayland
     wl-clipboard
