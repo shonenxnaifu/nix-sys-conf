@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, pkgs, noctalia, sidra, ... }:
+{ config, pkgs, noctalia, sidra, opencode, ... }:
 
 {
   imports =
@@ -154,7 +154,8 @@
     gimp
     telegram-desktop
     vesktop
-    sidra.packages.${pkgs.system}.default
+    sidra.packages.${pkgs.stdenv.hostPlatform.system}.default
+    opencode.packages.${pkgs.stdenv.hostPlatform.system}.default
     obs-studio
 
     # Wayland

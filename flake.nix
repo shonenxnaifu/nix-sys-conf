@@ -13,6 +13,8 @@
     };
 
     sidra.url = "github:wimpysworld/sidra";
+
+    opencode.url = "github:anomalyco/opencode";
   };
 
   outputs =
@@ -22,11 +24,12 @@
       home-manager,
       noctalia,
       sidra,
+      opencode,
     }:
     {
       nixosConfigurations.nixos-pc = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit noctalia sidra; };
+        specialArgs = { inherit noctalia sidra opencode; };
         modules = [
           ./configuration.nix
           
