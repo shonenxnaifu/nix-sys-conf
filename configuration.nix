@@ -155,6 +155,7 @@
     telegram-desktop
     vesktop
     sidra.packages.${pkgs.system}.default
+    obs-studio
 
     # Wayland
     wl-clipboard
