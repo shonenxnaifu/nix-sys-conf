@@ -158,6 +158,7 @@
     opencode.packages.${pkgs.stdenv.hostPlatform.system}.default
     obs-studio
     bun
+    marksman
 
     # Wayland
     wl-clipboard
