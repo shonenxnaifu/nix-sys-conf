@@ -160,7 +160,6 @@
     bun
     marksman
     markdownlint-cli2
-    icu
 
     # Wayland
     wl-clipboard
