@@ -159,6 +159,7 @@
     obs-studio
     bun
     marksman
+    markdownlint-cli2
 
     # Wayland
     wl-clipboard
