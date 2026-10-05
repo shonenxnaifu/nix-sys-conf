@@ -157,6 +157,7 @@
     sidra.packages.${pkgs.stdenv.hostPlatform.system}.default
     opencode.packages.${pkgs.stdenv.hostPlatform.system}.default
     obs-studio
+    bun
 
     # Wayland
     wl-clipboard
