@@ -113,6 +113,12 @@
 
   programs.dconf.enable = true;
 
+  virtualisation.docker.enable = true;
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable = true;
+  };
+
   # Environment variables untuk Nvidia + Wayland
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
