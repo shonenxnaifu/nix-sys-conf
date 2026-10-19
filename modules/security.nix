@@ -24,9 +24,9 @@
       IdentitiesOnly yes
 
       Host vps-seulgi
-      HostName = "103.235.72.200";
-      User = "root";
-      IdentityFile = "~/.ssh/ssh_vps_seulgi";
+      HostName 103.235.72.200
+      User root
+      IdentityFile "~/.ssh/ssh_vps_seulgi"
     '';
   };
 }
