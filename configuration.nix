@@ -166,6 +166,7 @@
     bun
     marksman
     markdownlint-cli2
+    vivaldi
 
     # Wayland
     wl-clipboard
